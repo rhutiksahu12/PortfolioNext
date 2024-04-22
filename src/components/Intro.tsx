@@ -8,7 +8,7 @@ const Intro = () => {
                 <div className='col-span-1  text-cyan-600 font-mono'>
                     <p>Frontend Developer</p>
                     <h1 className='text-white text-7xl font-bold '>
-                        I'm Rhutik Sahu
+                        I&apos;m Rhutik Sahu
                     </h1>
                     <div className='flex gap-2 font-semibold'>
                         <button className='bg-cyan-600/70 hover:bg-cyan-900 shadow-md text-white px-3 py-2'>
