@@ -16,6 +16,7 @@ import Redux from '../../assets/redux.png'
 import JS from '../../assets/js2.png'
 import Html from '../../assets/html.png'
 import Css from '../../assets/css.png'
+import Docker from '../../assets/docker.png'
 
 const skillsData = [
     // {
@@ -50,13 +51,17 @@ const skillsData = [
         label: "CSS",
         image: Css,
     },
+    {
+        label: "Docker",
+        image: Docker
+    }
 
 ]
 
 const Skills = () => {
     return (
         <>
-            <div className='flex flex-col w-full mb-10 min-h-screen'>
+            <div className='flex flex-col w-full min-h-screen justify-center '>
                 <h1 className='text-center mb-10 text-3xl font-bold text-white'>My Skills</h1>
                 <div className='grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2 gap-4 justify-items-center'>
                     {skillsData.map(skill => {
@@ -70,13 +75,10 @@ const Skills = () => {
                                         <CardDescription className='text-center text-white text-lg'>{skill.label}</CardDescription>
                                     </CardHeader>
                                 </Card>
-
                             </div>
                         )
                     })}
-
                 </div>
-
             </div>
         </>
     )

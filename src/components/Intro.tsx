@@ -2,6 +2,7 @@ import React from 'react'
 
 
 const Intro = () => {
+    
     return (
         <>
             <div className='grid grid-cols-1 lg:grid-cols-2 justify-items-center w-full lg:w-3/4 md:w-full content-center h-screen'>

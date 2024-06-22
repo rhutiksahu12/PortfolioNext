@@ -3,7 +3,7 @@ import MaxWidthWrapper from './MaxWidthWrapper'
 
 const Footer = () => {
     return (
-        <div className='text-white text-lg'>
+        <div className='text-white text-lg h-[50vh]'>
             <MaxWidthWrapper>
                 Footer
             </MaxWidthWrapper>
