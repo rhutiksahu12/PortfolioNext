@@ -1,31 +1,43 @@
-import React from 'react'
-
+import React from 'react';
+import Link from 'next/link';
 
 const Intro = () => {
-    
-    return (
-        <>
-            <div className='grid grid-cols-1 lg:grid-cols-2 justify-items-center w-full lg:w-3/4 md:w-full content-center h-screen'>
-                <div className='col-span-1  text-cyan-600 font-mono'>
-                    <p>Frontend Developer</p>
-                    <h1 className='text-white text-7xl font-bold '>
-                        I&apos;m Rhutik Sahu
-                    </h1>
-                    <div className='flex gap-2 font-semibold'>
-                        <button className='bg-cyan-600/70 hover:bg-cyan-900 shadow-md text-white px-3 py-2'>
-                            More About Me
-                        </button>
-                        <button className='bg-white hover:bg-white/70 shadow-md text-cyan-600 px-3 py-2'>
-                            Hire Me
-                        </button>
-                    </div>
-                </div>
-                <div className='col-span-1 flex items-center justify-center'>
-                    <h1 className='text-white'>Photo</h1>
-                </div>
-            </div>
-        </>
-    )
-}
+  return (
+    <section className="py-20 sm:py-32 px-4 border-b border-border">
+      <div className="max-w-4xl mx-auto">
+        <div className="space-y-6">
+          {/* Eyebrow */}
+          <p className="text-sm font-medium text-muted-foreground">Frontend Engineer</p>
 
-export default Intro
+          {/* Main Heading */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+            Building performant, accessible digital experiences.
+          </h1>
+
+          {/* Subheading */}
+          <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
+            I craft thoughtful web interfaces with a focus on user experience and clean code. Currently building at <span className="font-semibold text-foreground">Company</span>, previously at <span className="font-semibold text-foreground">StartUp</span>.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 pt-6">
+            <Link
+              href="/projects"
+              className="inline-flex items-center justify-center px-6 py-3 font-medium bg-accent text-accent-foreground hover:opacity-90 transition-opacity rounded-lg shadow-md hover:shadow-lg"
+            >
+              View Projects
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-6 py-3 font-medium border-2 border-accent text-accent hover:bg-accent/10 transition-colors rounded-lg"
+            >
+              Get in Touch
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Intro;
