@@ -134,40 +134,45 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                     {/* Code Example */}
                     <section className="space-y-4">
                         <h2 className="text-2xl font-bold text-accent">Implementation</h2>
-                        <div className="bg-muted border border-border rounded-lg overflow-hidden">
-                            <div className="bg-muted-foreground/10 px-4 py-2 border-b border-border text-xs font-mono text-muted-foreground">
-                                example.ts
+                        <div className="rounded-lg overflow-hidden border border-border shadow-lg" style={{ backgroundColor: '#1e1e1e' }}>
+                            <div className="bg-gradient-to-r from-slate-900 to-slate-800 px-4 py-3 border-b border-slate-700 flex items-center justify-between">
+                                <span className="text-xs font-mono text-slate-400">example.ts</span>
+                                <div className="flex gap-2">
+                                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                                </div>
                             </div>
-                            <pre className="p-4 overflow-x-auto">
-                                <code className="text-sm">{`// Example component implementation
-import React from 'react';
+                            <pre className="p-6 overflow-x-auto">
+                                <code className="text-sm font-mono leading-relaxed" style={{ color: '#d4d4d4' }}>{`${`// Example component implementation`}
+${`import React from 'react';`}
 
-interface ComponentProps {
-  title: string;
-  data: Array<{
-    id: string;
-    value: number;
-  }>;
-  onUpdate?: (id: string) => void;
-}
+${`interface ComponentProps {`}
+${`  title: string;`}
+${`  data: Array<{`}
+${`    id: string;`}
+${`    value: number;`}
+${`  }>;`}
+${`  onUpdate?: (id: string) => void;`}
+${`}`}
 
-export function OptimizedComponent({
-  title,
-  data,
-  onUpdate,
-}: ComponentProps) {
-  // Virtual scrolling for large datasets
-  // WebSocket integration for real-time updates
-  // Memoization to prevent unnecessary re-renders
-  
-  return (
-    <div>
-      {/* Component markup */}
-    </div>
-  );
-}
+${`export function OptimizedComponent({`}
+${`  title,`}
+${`  data,`}
+${`  onUpdate,`}
+${`}: ComponentProps) {`}
+${`  // Virtual scrolling for large datasets`}
+${`  // WebSocket integration for real-time updates`}
+${`  // Memoization to prevent unnecessary re-renders`}
+${`  `}
+${`  return (`}
+${`    <div>`}
+${`      {/* Component markup */}`}
+${`    </div>`}
+${`  );`}
+${`}`}
 
-export default OptimizedComponent;`}</code>
+${`export default OptimizedComponent;`}`}</code>
                             </pre>
                         </div>
                     </section>

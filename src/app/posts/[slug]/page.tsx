@@ -309,9 +309,17 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                                 const parts = paragraph.split('```');
                                 const code = parts[1];
                                 return (
-                                    <div key={index} className="bg-muted border border-border rounded-lg overflow-hidden my-6">
-                                        <pre className="p-4 overflow-x-auto">
-                                            <code className="text-sm font-mono">{code}</code>
+                                    <div key={index} className="rounded-lg overflow-hidden my-6 border border-border shadow-lg" style={{ backgroundColor: '#1e1e1e' }}>
+                                        <div className="bg-gradient-to-r from-slate-900 to-slate-800 px-4 py-3 border-b border-slate-700 flex items-center justify-between">
+                                            <span className="text-xs font-mono text-slate-400">code</span>
+                                            <div className="flex gap-2">
+                                                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                                                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                                            </div>
+                                        </div>
+                                        <pre className="p-6 overflow-x-auto">
+                                            <code className="text-sm font-mono leading-relaxed" style={{ color: '#d4d4d4' }}>{code}</code>
                                         </pre>
                                     </div>
                                 );
