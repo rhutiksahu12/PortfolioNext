@@ -185,10 +185,11 @@ export default function ContactPage() {
                         {/* Submit Button */}
                         <button
                             type="submit"
-                            disabled={loading}
+                            // disabled={loading}
+                            disabled={true}
                             className="w-full px-6 py-3 font-medium bg-accent text-accent-foreground hover:opacity-90 disabled:opacity-50 transition-opacity rounded-lg shadow-md hover:shadow-lg"
                         >
-                            {loading ? 'Sending...' : 'Send Message'}
+                            {loading ? 'Sending...' : 'Coming Soon'}
                         </button>
                     </form>
                 </div>
