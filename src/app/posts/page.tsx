@@ -48,7 +48,7 @@ export default function PostsPage() {
                     <h2 className="text-xl font-semibold group-hover:opacity-60 transition-opacity">
                       {post.title}
                     </h2>
-                    <ArrowRight className="w-5 h-5 text-accent opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                    <ArrowRight className="w-5 h-5 text-accent opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
                   </div>
 
                   {/* Tags */}

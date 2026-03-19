@@ -145,7 +145,7 @@ export default function NewsletterSignup({
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             disabled={isLoading || isSuccess}
-                            className="flex-1 px-4 py-3 bg-background border border-border rounded-lg disabled:opacity-50 focus:outline-none focus:ring-2 focus:ring-accent"
+                            className="flex-1 px-4 py-3 bg-background border border-border rounded-lg disabled:opacity-50 focus:outline-hidden focus:ring-2 focus:ring-accent"
                             required
                         />
                         <button

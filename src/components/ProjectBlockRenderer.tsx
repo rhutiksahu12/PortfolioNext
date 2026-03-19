@@ -36,7 +36,7 @@ async function CodeBlock({
         The dual-theme setup uses CSS variables so light/dark switch automatically.
       */}
             <div
-                className="overflow-x-auto [&>pre]:p-5 [&>pre]:leading-relaxed [&>pre]:!bg-transparent"
+                className="overflow-x-auto [&>pre]:p-5 [&>pre]:leading-relaxed [&>pre]:bg-transparent!"
                 dangerouslySetInnerHTML={{ __html: html }}
             />
         </div>
@@ -57,7 +57,7 @@ function DiagramBlock({ title, steps }: Extract<ContentBlock, { type: 'diagram' 
                 {steps.map((step, i) => (
                     <div key={i} className="flex flex-col items-start">
                         <div className="flex items-center gap-3">
-                            <div className="w-7 h-7 rounded-full bg-muted flex items-center justify-center text-xs font-semibold text-muted-foreground flex-shrink-0">
+                            <div className="w-7 h-7 rounded-full bg-muted flex items-center justify-center text-xs font-semibold text-muted-foreground shrink-0">
                                 {i + 1}
                             </div>
                             <div>
@@ -125,7 +125,7 @@ export async function BlockRenderer({ block }: { block: ContentBlock }) {
                 <ol className="space-y-2">
                     {block.items.map((item, i) => (
                         <li key={i} className="flex gap-3">
-                            <span className="text-foreground font-semibold flex-shrink-0 text-sm mt-0.5">
+                            <span className="text-foreground font-semibold shrink-0 text-sm mt-0.5">
                                 {i + 1}.
                             </span>
                             <span className="text-muted-foreground text-lg">{item}</span>
@@ -136,7 +136,7 @@ export async function BlockRenderer({ block }: { block: ContentBlock }) {
                 <ul className="space-y-1.5">
                     {block.items.map((item, i) => (
                         <li key={i} className="flex gap-3 text-muted-foreground">
-                            <span className="text-accent mt-1.5 flex-shrink-0">–</span>
+                            <span className="text-accent mt-1.5 shrink-0">–</span>
                             <span className="text-lg">{item}</span>
                         </li>
                     ))}

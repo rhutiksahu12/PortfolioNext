@@ -29,7 +29,7 @@ async function CodeBlock({
                 </div>
             </div>
             <div
-                className="overflow-x-auto [&>pre]:p-5 [&>pre]:leading-relaxed [&>pre]:!bg-transparent"
+                className="overflow-x-auto [&>pre]:p-5 [&>pre]:leading-relaxed [&>pre]:bg-transparent!"
                 dangerouslySetInnerHTML={{ __html: html }}
             />
         </div>
@@ -95,7 +95,7 @@ export async function PostBlockRenderer({ block }: { block: PostBlock }) {
                 <ol className="space-y-2 my-1">
                     {block.items.map((item, i) => (
                         <li key={i} className="flex gap-3">
-                            <span className="text-foreground font-semibold flex-shrink-0 text-sm mt-0.5">
+                            <span className="text-foreground font-semibold shrink-0 text-sm mt-0.5">
                                 {i + 1}.
                             </span>
                             <span className="text-muted-foreground text-lg">{item}</span>
@@ -106,7 +106,7 @@ export async function PostBlockRenderer({ block }: { block: PostBlock }) {
                 <ul className="space-y-1.5 my-1">
                     {block.items.map((item, i) => (
                         <li key={i} className="flex gap-3 text-muted-foreground">
-                            <span className="text-accent mt-1.5 flex-shrink-0">–</span>
+                            <span className="text-accent mt-1.5 shrink-0">–</span>
                             <span className="text-lg">{item}</span>
                         </li>
                     ))}

@@ -100,7 +100,7 @@ export default function ProjectsPage() {
                                                         ))}
                                                     </div>
                                                 </div>
-                                                <ArrowRight className="w-5 h-5 text-accent opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-1" />
+                                                <ArrowRight className="w-5 h-5 text-accent opacity-0 group-hover:opacity-100 transition-opacity shrink-0 mt-1" />
                                             </div>
                                         </div>
                                     </Link>

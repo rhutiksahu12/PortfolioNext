@@ -58,7 +58,7 @@ const ContactMeForm = () => {
                                     <FormItem>
                                         <FormLabel className='text-white text-xl'>Name</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="John Wick" {...field} className='bg-inherit text-white border-0 border-b-2 rounded-none outline-none placeholder:text-white placeholder:opacity-50 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0' />
+                                            <Input placeholder="John Wick" {...field} className='bg-inherit text-white border-0 border-b-2 rounded-none outline-hidden placeholder:text-white placeholder:opacity-50 focus-visible:outline-hidden focus-visible:ring-0 focus-visible:ring-offset-0' />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -71,7 +71,7 @@ const ContactMeForm = () => {
                                     <FormItem>
                                         <FormLabel className='text-white text-xl'>Contact</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="1234567890" {...field} className='bg-inherit text-white border-0 border-b-2 rounded-none outline-none placeholder:text-white placeholder:opacity-50 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0' />
+                                            <Input placeholder="1234567890" {...field} className='bg-inherit text-white border-0 border-b-2 rounded-none outline-hidden placeholder:text-white placeholder:opacity-50 focus-visible:outline-hidden focus-visible:ring-0 focus-visible:ring-offset-0' />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -84,7 +84,7 @@ const ContactMeForm = () => {
                                     <FormItem>
                                         <FormLabel className='text-white text-xl'>Message</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="Hello I am Rhutik" {...field} className='bg-inherit text-white border-0 border-b-2 rounded-none outline-none placeholder:text-white placeholder:opacity-50 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0' />
+                                            <Input placeholder="Hello I am Rhutik" {...field} className='bg-inherit text-white border-0 border-b-2 rounded-none outline-hidden placeholder:text-white placeholder:opacity-50 focus-visible:outline-hidden focus-visible:ring-0 focus-visible:ring-offset-0' />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>

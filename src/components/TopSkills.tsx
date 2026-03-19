@@ -35,7 +35,7 @@ const TopSkills = () => {
                             key={skill.label}
                             className='flex items-center gap-2 px-3 py-2 rounded-full border border-border bg-muted/40 hover:bg-muted/70 transition-all hover:border-accent/50'
                         >
-                            <div className='relative w-5 h-5 flex-shrink-0'>
+                            <div className='relative w-5 h-5 shrink-0'>
                                 <Image
                                     src={skill.image}
                                     alt={skill.label}

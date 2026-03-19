@@ -57,28 +57,28 @@ export default function AboutPage() {
                             <h2 className="text-2xl font-bold">What I Value</h2>
                             <ul className="space-y-3">
                                 <li className="flex gap-4">
-                                    <span className="font-semibold text-foreground flex-shrink-0">Quality</span>
+                                    <span className="font-semibold text-foreground shrink-0">Quality</span>
                                     <span className="text-muted-foreground">
                                         I write code that&apos;s maintainable, tested, and thoughtful. Shipping fast is great, but
                                         shipping well matters more.
                                     </span>
                                 </li>
                                 <li className="flex gap-4">
-                                    <span className="font-semibold text-foreground flex-shrink-0">Clarity</span>
+                                    <span className="font-semibold text-foreground shrink-0">Clarity</span>
                                     <span className="text-muted-foreground">
                                         Clear communication and self-documenting code make the difference between a good team
                                         and a great one.
                                     </span>
                                 </li>
                                 <li className="flex gap-4">
-                                    <span className="font-semibold text-foreground flex-shrink-0">Impact</span>
+                                    <span className="font-semibold text-foreground shrink-0">Impact</span>
                                     <span className="text-muted-foreground">
                                         I care about building things that matter. Performance improvements, security fixes, and
                                         new features all matter when they serve real users.
                                     </span>
                                 </li>
                                 <li className="flex gap-4">
-                                    <span className="font-semibold text-foreground flex-shrink-0">Learning</span>
+                                    <span className="font-semibold text-foreground shrink-0">Learning</span>
                                     <span className="text-muted-foreground">
                                         The best developers never stop learning. I&apos;m constantly exploring new technologies,
                                         patterns, and ways of thinking about problems.

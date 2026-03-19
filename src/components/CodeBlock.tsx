@@ -21,7 +21,7 @@ export default async function CodeBlock({
         <div className="rounded-lg overflow-hidden border border-border shadow-lg bg-[#1e1e1e] ">
 
             {/* Header */}
-            <div className="bg-gradient-to-r from-slate-900 to-slate-800 px-4 py-3 border-b border-slate-700 flex items-center justify-between">
+            <div className="bg-linear-to-r from-slate-900 to-slate-800 px-4 py-3 border-b border-slate-700 flex items-center justify-between">
                 <span className="text-xs font-mono text-slate-400">{filename}</span>
 
                 <div className="flex gap-2">

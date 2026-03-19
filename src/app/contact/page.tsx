@@ -126,7 +126,7 @@ export default function ContactPage() {
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-background focus:ring-accent bg-background text-foreground"
+                                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-offset-background focus:ring-accent bg-background text-foreground"
                                 placeholder="Your name"
                             />
                         </div>
@@ -143,7 +143,7 @@ export default function ContactPage() {
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-background focus:ring-foreground bg-background text-foreground"
+                                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-offset-background focus:ring-foreground bg-background text-foreground"
                                 placeholder="your@email.com"
                             />
                         </div>
@@ -160,7 +160,7 @@ export default function ContactPage() {
                                 value={formData.subject}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-background focus:ring-foreground bg-background text-foreground"
+                                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-offset-background focus:ring-foreground bg-background text-foreground"
                                 placeholder="What's this about?"
                             />
                         </div>
@@ -177,7 +177,7 @@ export default function ContactPage() {
                                 onChange={handleChange}
                                 required
                                 rows={6}
-                                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-background focus:ring-foreground bg-background text-foreground resize-none"
+                                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-offset-background focus:ring-foreground bg-background text-foreground resize-none"
                                 placeholder="Tell me more about your project or inquiry..."
                             />
                         </div>
