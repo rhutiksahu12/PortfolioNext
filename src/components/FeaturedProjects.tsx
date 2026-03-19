@@ -2,38 +2,37 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
-interface Project {
-    id: string;
-    title: string;
-    description: string;
-    slug: string;
-    tags: string[];
-}
+
+const projects = [
+    {
+        id: '1',
+        title: 'Smart Locker Delivery System',
+        description: 'Last-mile delivery backend with size-based locker allocation, OTP pickup verification, and a locker state machine to eliminate failed deliveries.',
+        slug: 'smart-locker-delivery',
+        year: 2024,
+        tags: ['Backend', 'Node.js', 'PostgreSQL', 'System Design'],
+    },
+    {
+        id: '2',
+        title: 'HireFront - Job Platform',
+        description: 'Structured hiring pipeline platform linking companies, jobs, candidates, and pipeline stages — built as a workflow system, not a job board.',
+        slug: 'hirefront',
+        year: 2024,
+        tags: ['Full-Stack', 'React', 'Node.js', 'PostgreSQL'],
+    },
+    {
+        id: '3',
+        title: 'Quick Commerce Inventory & Picking',
+        description: 'Warehouse fulfillment system with deterministic shelf location modelling, barcode-verified picking, and multi-order simultaneous fulfillment.',
+        slug: 'warehouse-picking',
+        year: 2024,
+        tags: ['Backend', 'Node.js', 'PostgreSQL', 'Hardware Integration'],
+    },
+]
+
 
 const FeaturedProjects = () => {
-    const projects: Project[] = [
-        {
-            id: '1',
-            title: 'Design System Overhaul',
-            description: 'Rebuilt our component library with improved accessibility and performance. Reduced bundle size by 40% while improving DX.',
-            slug: 'design-system-overhaul',
-            tags: ['React', 'TypeScript', 'Storybook'],
-        },
-        {
-            id: '2',
-            title: 'Real-time Analytics Dashboard',
-            description: 'Built a real-time data visualization dashboard handling thousands of updates per second with minimal latency.',
-            slug: 'analytics-dashboard',
-            tags: ['Next.js', 'WebSockets', 'D3.js'],
-        },
-        {
-            id: '3',
-            title: 'E-commerce Optimization',
-            description: 'Improved site performance increasing conversion by 35%. Implemented Core Web Vitals optimizations and dynamic loading.',
-            slug: 'ecommerce-optimization',
-            tags: ['Performance', 'Next.js', 'Analytics'],
-        },
-    ];
+
 
     return (
         <section className="py-20 sm:py-32 px-4 border-b border-border">

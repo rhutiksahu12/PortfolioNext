@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ThemeProvider from "@/components/ThemeProvider";
 
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -14,6 +15,9 @@ export const metadata: Metadata = {
   title: "Rhutik Sahu - Frontend Developer",
   description: "Portfolio and case studies by Rhutik Sahu. Building performant, accessible web experiences.",
   metadataBase: new URL("https://rhutik.dev"),
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

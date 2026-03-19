@@ -1,3 +1,4 @@
+import { Download } from 'lucide-react';
 import Link from 'next/link';
 
 export default function AboutPage() {
@@ -6,7 +7,7 @@ export default function AboutPage() {
             <div className="max-w-3xl mx-auto space-y-12">
                 {/* Header */}
                 <div className="space-y-4 border-b border-border pb-8">
-                    <h1 className="text-4xl sm:text-5xl font-bold">About</h1>
+                    <h1 className="text-4xl flex items-center gap-3 sm:text-5xl font-bold">About <a href="https://docs.google.com/document/d/1F3wkYPnwAcv0ZcCTgnhWqJ2RA6xF17IFNgRGjJ9f85c/view" target="_blank" rel="noopener noreferrer" ><Download size={36}/></a></h1>
                 </div>
 
                 {/* Main Content */}
@@ -100,14 +101,14 @@ export default function AboutPage() {
                                 <div>
                                     <h3 className="font-semibold text-foreground mb-2">Backend</h3>
                                     <p className="text-muted-foreground">
-                                        Node.js, Express, PostgreSQL, MongoDB, Prisma, REST API design, authentication, caching
+                                        Node.js, Express, PostgreSQL, Prisma, REST API design, authentication, caching
                                         strategies
                                     </p>
                                 </div>
                                 <div>
                                     <h3 className="font-semibold text-foreground mb-2">DevOps & Tools</h3>
                                     <p className="text-muted-foreground">
-                                        Git, Docker, CI/CD (GitHub Actions, Jenkins), Vercel, AWS basics, monitoring & logging,
+                                        Git, Docker, AWS basics, monitoring & logging,
                                         performance profiling
                                     </p>
                                 </div>

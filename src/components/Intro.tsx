@@ -1,43 +1,40 @@
-import React from 'react';
-import Link from 'next/link';
+import Link from 'next/link'
 
-const Intro = () => {
+export default function HomePage() {
   return (
     <section className="py-20 sm:py-32 px-4 border-b border-border">
-      <div className="max-w-4xl mx-auto">
-        <div className="space-y-6">
-          {/* Eyebrow */}
-          <p className="text-sm font-medium text-muted-foreground">Frontend Engineer</p>
+      <div className="max-w-4xl mx-auto space-y-6">
 
-          {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-            Building performant, accessible digital experiences.
-          </h1>
+        <p className="text-sm font-medium text-muted-foreground">
+          Full Stack Engineer · Hyderabad
+        </p>
 
-          {/* Subheading */}
-          <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-            I craft thoughtful web interfaces with a focus on user experience and clean code. Currently building at <span className="font-semibold text-foreground">Company</span>, previously at <span className="font-semibold text-foreground">StartUp</span>.
-          </p>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+          Building systems that solve real problems.
+        </h1>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-6">
-            <Link
-              href="/projects"
-              className="inline-flex items-center justify-center px-6 py-3 font-medium bg-accent text-accent-foreground hover:opacity-90 transition-opacity rounded-lg shadow-md hover:shadow-lg"
-            >
-              View Projects
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 font-medium border-2 border-accent text-accent hover:bg-accent/10 transition-colors rounded-lg"
-            >
-              Get in Touch
-            </Link>
-          </div>
+        <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
+          I design and build systems - from last-mile delivery infrastructure
+          to marketplace trust layers. Focused on clean architecture, good product
+          thinking, and shipping things that work.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 pt-6">
+          <Link
+            href="/projects"
+            className="inline-flex items-center justify-center px-6 py-3 font-medium bg-accent text-accent-foreground hover:opacity-90 transition-opacity rounded-lg"
+          >
+            View Projects
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center px-6 py-3 font-medium border border-border hover:bg-muted transition-colors rounded-lg"
+          >
+            Get in Touch
+          </Link>
         </div>
+
       </div>
     </section>
-  );
-};
-
-export default Intro;
+  )
+}

@@ -8,61 +8,47 @@ interface Project {
     slug: string;
     year: number;
     tags: string[];
-    featured?: boolean;
 }
 
 const PROJECTS: Project[] = [
     {
         id: '1',
-        title: 'Design System Overhaul',
-        description: 'Rebuilt our component library with improved accessibility and performance. Reduced bundle size by 40% while improving DX.',
-        slug: 'design-system-overhaul',
+        title: 'Smart Locker Delivery System',
+        description: 'Last-mile delivery backend with size-based locker allocation, OTP pickup verification, and a locker state machine to eliminate failed deliveries.',
+        slug: 'smart-locker-delivery',
         year: 2024,
-        tags: ['React', 'TypeScript', 'Storybook'],
-        featured: true,
+        tags: ['Backend', 'Node.js', 'PostgreSQL', 'System Design'],
     },
     {
         id: '2',
-        title: 'Real-time Analytics Dashboard',
-        description: 'Built a real-time data visualization dashboard handling thousands of updates per second with minimal latency.',
-        slug: 'analytics-dashboard',
+        title: 'C2C Used Goods Marketplace',
+        description: 'Broker-free resale platform with verified seller onboarding, automated dealer detection heuristics, and a local-first launch strategy.',
+        slug: 'c2c-marketplace',
         year: 2024,
-        tags: ['Next.js', 'WebSockets', 'D3.js'],
-        featured: true,
+        tags: ['Product Design', 'Node.js', 'PostgreSQL', 'Fraud Detection'],
     },
     {
         id: '3',
-        title: 'E-commerce Optimization',
-        description: 'Improved site performance increasing conversion by 35%. Implemented Core Web Vitals optimizations and dynamic loading.',
-        slug: 'ecommerce-optimization',
-        year: 2023,
-        tags: ['Performance', 'Next.js', 'Analytics'],
-        featured: true,
+        title: 'HireFront - Job Platform',
+        description: 'Structured hiring pipeline platform linking companies, jobs, candidates, and pipeline stages — built as a workflow system, not a job board.',
+        slug: 'hirefront',
+        year: 2024,
+        tags: ['Full-Stack', 'React', 'Node.js', 'PostgreSQL'],
     },
     {
         id: '4',
-        title: 'Mobile App Redesign',
-        description: 'Complete redesign and rebuild of mobile app using React Native, improving performance and user retention.',
-        slug: 'mobile-redesign',
-        year: 2023,
-        tags: ['React Native', 'Mobile', 'UI/UX'],
-    },
-    {
-        id: '5',
-        title: 'API Rate Limiter Service',
-        description: 'Built a distributed rate limiting service handling millions of requests with <1ms latency.',
-        slug: 'rate-limiter',
-        year: 2023,
-        tags: ['Backend', 'Performance', 'Redis'],
+        title: 'Quick Commerce Inventory & Picking',
+        description: 'Warehouse fulfillment system with deterministic shelf location modelling, barcode-verified picking, and multi-order simultaneous fulfillment.',
+        slug: 'warehouse-picking',
+        year: 2024,
+        tags: ['Backend', 'Node.js', 'PostgreSQL', 'Hardware Integration'],
     },
 ];
 
 export default function ProjectsPage() {
     const projectsByYear = PROJECTS.reduce((acc, project) => {
         const year = project.year;
-        if (!acc[year]) {
-            acc[year] = [];
-        }
+        if (!acc[year]) acc[year] = [];
         acc[year].push(project);
         return acc;
     }, {} as Record<number, Project[]>);
@@ -74,15 +60,18 @@ export default function ProjectsPage() {
     return (
         <div className="min-h-screen py-20 sm:py-32 px-4">
             <div className="max-w-4xl mx-auto space-y-16">
+
                 {/* Header */}
                 <div className="space-y-4 border-b border-border pb-8">
-                    <h1 className="text-4xl sm:text-5xl font-bold"><span className="text-accent">Projects</span></h1>
+                    <h1 className="text-4xl sm:text-5xl font-bold">
+                        <span className="text-accent">Projects</span>
+                    </h1>
                     <p className="text-lg text-muted-foreground max-w-2xl">
                         A collection of projects I&apos;ve worked on, showcasing various technologies and approaches to solving problems.
                     </p>
                 </div>
 
-                {/* Projects by Year */}
+                {/* Projects by year */}
                 <div className="space-y-12">
                     {sortedYears.map((year) => (
                         <div key={year} className="space-y-6">
@@ -111,7 +100,7 @@ export default function ProjectsPage() {
                                                         ))}
                                                     </div>
                                                 </div>
-                                                <ArrowRight className="w-5 h-5 text-accent opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                                                <ArrowRight className="w-5 h-5 text-accent opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-1" />
                                             </div>
                                         </div>
                                     </Link>
@@ -120,6 +109,7 @@ export default function ProjectsPage() {
                         </div>
                     ))}
                 </div>
+
             </div>
         </div>
     );
