@@ -7,7 +7,7 @@ export default function AboutPage() {
             <div className="max-w-3xl mx-auto space-y-12">
                 {/* Header */}
                 <div className="space-y-4 border-b border-border pb-8">
-                    <h1 className="text-4xl flex items-center gap-3 sm:text-5xl font-bold">About <a href="https://docs.google.com/document/d/1F3wkYPnwAcv0ZcCTgnhWqJ2RA6xF17IFNgRGjJ9f85c/view" target="_blank" rel="noopener noreferrer" ><Download size={36}/></a></h1>
+                    <h1 className="text-4xl flex items-center gap-3 sm:text-5xl font-bold">About <a href="https://docs.google.com/document/d/1F3wkYPnwAcv0ZcCTgnhWqJ2RA6xF17IFNgRGjJ9f85c/view" target="_blank" rel="noopener noreferrer" ><Download size={38} aria-label="Download Resume"  /></a></h1>
                 </div>
 
                 {/* Main Content */}
@@ -15,10 +15,8 @@ export default function AboutPage() {
                     <div className="space-y-8">
                         {/* Introduction */}
                         <section className="space-y-4">
-                            <p className="text-lg leading-relaxed text-muted-foreground">
-                                I&apos;m Rhutik Sahu, a frontend engineer passionate about building digital experiences that are
-                                fast, accessible, and delightful to use. I&apos;ve spent the last 5+ years crafting software that
-                                scales, performs, and makes people happy.
+                            <p className=" leading-relaxed text-muted-foreground">
+                                I&apos;m Rhutik Sahu, a Full Stack Engineer passionate about building digital experiences that are fast, accessible, and delightful to use. I&apos;ve spent the last 2+ years crafting software that scales, performs, and makes people happy.
                             </p>
                         </section>
 
@@ -27,13 +25,10 @@ export default function AboutPage() {
                             <h2 className="text-2xl font-bold">My Story</h2>
                             <p className="text-muted-foreground leading-relaxed">
                                 I stumbled into programming during college when I became obsessed with understanding how
-                                websites worked. What started as curiosity turned into a career, and now I can&apos;t imagine doing
-                                anything else.
+                                websites worked. What started as curiosity turned into a career, and now I can&apos;t imagine doing anything else.
                             </p>
                             <p className="text-muted-foreground leading-relaxed">
-                                Over the years, I&apos;ve worked with startups and established companies, learning that great
-                                software requires more than just technical skills—it requires empathy for users, clarity of
-                                communication, and a relentless focus on quality.
+                                Over the years, I&apos;ve worked with startups and established companies, learning that great software requires more than just technical skills it requires empathy for users, clarity of communication, and a relentless focus on quality.
                             </p>
                         </section>
 
@@ -41,7 +36,7 @@ export default function AboutPage() {
                         <section className="space-y-4">
                             <h2 className="text-2xl font-bold">Experience</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                I&apos;ve lead frontend architecture at mid-stage startups, rebuilt critical systems at scale, and
+                                I&apos;ve lead frontend architecture at early-stage startups, rebuilt critical systems at scale, and
                                 mentored junior developers. My expertise spans modern frontend frameworks, performance
                                 optimization, and building systems that grow with your business.
                             </p>
@@ -119,8 +114,8 @@ export default function AboutPage() {
                         <section className="space-y-4">
                             <h2 className="text-2xl font-bold">Beyond Code</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                When I&apos;m not coding, you&apos;ll find me reading about product strategy, exploring new technologies,
-                                or contributing to open source. I&apos;m also a coffee enthusiast and occasional mountain biker.
+                                When I&apos;m not coding, you&apos;ll find me reading about technical articles, exploring new technologies,
+                                or contributing to open source. I&apos;m also a coffee enthusiast and gamer.
                             </p>
                         </section>
 

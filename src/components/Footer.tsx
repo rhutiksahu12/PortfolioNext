@@ -44,6 +44,17 @@ const Footer = () => {
                                         Contact
                                     </Link>
                                 </li>
+                                <li>
+                                    <a
+                                        href="https://docs.google.com/document/d/1F3wkYPnwAcv0ZcCTgnhWqJ2RA6xF17IFNgRGjJ9f85c/view"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
+                                        aria-label="Resume"
+                                    >
+                                        Resume
+                                    </a>
+                                </li>
                             </ul>
                         </div>
 
@@ -51,33 +62,34 @@ const Footer = () => {
                         <div className='space-y-4'>
                             <h4 className='font-semibold text-accent'>Connect</h4>
                             <div className='flex gap-4'>
-                                <a 
-                                    href="https://github.com/rhutiksahu12" 
-                                    target="_blank" 
+                                <Link
+                                    href="https://github.com/rhutiksahu12"
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     className='text-muted-foreground hover:text-foreground transition-colors'
                                     aria-label="GitHub"
                                 >
                                     <Github className='w-5 h-5' />
-                                </a>
-                                <a 
-                                    href="https://www.linkedin.com/in/rhutiksahu/" 
-                                    target="_blank" 
+                                </Link>
+                                <Link
+                                    href="https://www.linkedin.com/in/rhutiksahu/"
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     className='text-muted-foreground hover:text-foreground transition-colors'
                                     aria-label="LinkedIn"
                                 >
                                     <Linkedin className='w-5 h-5' />
-                                </a>
-                                <a 
-                                    href="https://twitter.com" 
-                                    target="_blank" 
+                                </Link>
+                                <Link
+                                    href="https://twitter.com"
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     className='text-muted-foreground hover:text-foreground transition-colors'
                                     aria-label="Twitter"
                                 >
                                     <Twitter className='w-5 h-5' />
-                                </a>
+                                </Link>
+
                             </div>
                         </div>
                     </div>
