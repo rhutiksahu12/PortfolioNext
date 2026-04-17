@@ -12,7 +12,7 @@ const NavBar = () => {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="font-semibold text-lg text-accent hover:opacity-70 transition-opacity">
+        <Link href="/" className="font-bold text-lg text-accent hover:opacity-70 transition-opacity">
           Rhutik Sahu
         </Link>
 
@@ -37,6 +37,11 @@ const NavBar = () => {
             <li>
               <Link href="/contact" className="hover:opacity-60 transition-opacity">
                 Contact
+              </Link>
+            </li>
+            <li>
+              <Link href="/dsa" className="hover:opacity-60 transition-opacity text-accent">
+                DSA
               </Link>
             </li>
           </ul>

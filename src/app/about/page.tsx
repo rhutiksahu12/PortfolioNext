@@ -4,10 +4,14 @@ import Link from 'next/link';
 export default function AboutPage() {
     return (
         <div className="min-h-screen py-20 sm:py-32 px-4">
-            <div className="max-w-3xl mx-auto space-y-12">
+            <div className="max-w-4xl mx-auto space-y-12">
                 {/* Header */}
                 <div className="space-y-4 border-b border-border pb-8">
-                    <h1 className="text-4xl flex items-center gap-3 sm:text-5xl font-bold">About <a href="https://docs.google.com/document/d/1F3wkYPnwAcv0ZcCTgnhWqJ2RA6xF17IFNgRGjJ9f85c/view" target="_blank" rel="noopener noreferrer" ><Download size={38} aria-label="Download Resume"  /></a></h1>
+                    <h1 className="text-4xl flex items-center gap-3 sm:text-5xl font-bold">
+                        <span className='text-accent'>
+                            About
+                        </span>
+                        <a href="https://docs.google.com/document/d/1F3wkYPnwAcv0ZcCTgnhWqJ2RA6xF17IFNgRGjJ9f85c/view" target="_blank" rel="noopener noreferrer" ><Download size={38} aria-label="Download Resume" /></a></h1>
                 </div>
 
                 {/* Main Content */}

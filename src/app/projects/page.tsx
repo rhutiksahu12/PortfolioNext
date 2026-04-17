@@ -59,7 +59,7 @@ export default function ProjectsPage() {
 
     return (
         <div className="min-h-screen py-20 sm:py-32 px-4">
-            <div className="max-w-4xl mx-auto space-y-16">
+            <div className="max-w-4xl mx-auto space-y-12">
 
                 {/* Header */}
                 <div className="space-y-4 border-b border-border pb-8">

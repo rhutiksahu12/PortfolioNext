@@ -46,7 +46,11 @@ export default function ContactPage() {
             <div className="max-w-2xl mx-auto space-y-12">
                 {/* Header */}
                 <div className="space-y-4 border-b border-border pb-8">
-                    <h1 className="text-4xl sm:text-5xl font-bold">Get in Touch</h1>
+                    <h1 className="text-4xl sm:text-5xl font-bold">
+                        <span className='text-accent'>
+                            Get in Touch
+                        </span>
+                    </h1>
                     <p className="text-lg text-muted-foreground">
                         Have a project in mind? Want to collaborate? Let&apos;s talk.
                     </p>

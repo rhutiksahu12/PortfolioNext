@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Rhutik Sahu - Frontend Developer",
+  title: "Rhutik Sahu - Software Engineer",
   description: "Portfolio and case studies by Rhutik Sahu. Building performant, accessible web experiences.",
   metadataBase: new URL("https://rhutik.dev"),
   icons: {
