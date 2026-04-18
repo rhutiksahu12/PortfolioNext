@@ -1,16 +1,21 @@
-"use server";
+import { getHighlighterInstance } from "@/lib/shiki";
 
-import { codeToHtml } from "shiki";
+function escapeHtml(str: string) {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
 
 export async function highlightCode(code: string, lang: string) {
   try {
-    const html = await codeToHtml(code, {
-      lang: lang as any,
+    const shiki = await getHighlighterInstance();
+
+    return shiki.codeToHtml(code, {
+      lang: lang || "text",
       theme: "github-dark",
     });
-    return html;
   } catch (e) {
-    console.error("Shiki highlight error:", e);
-    return `<pre class="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto text-sm font-mono border border-border"><code>${code}</code></pre>`;
+    return `<pre><code>${escapeHtml(code)}</code></pre>`;
   }
 }

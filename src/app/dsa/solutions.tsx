@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
 export type SolutionDetail = {
@@ -11,12 +12,12 @@ export const dsaSolutions: Record<string, SolutionDetail> = {
     explanation: (
       <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
         <p><strong className="text-foreground">Step 1: Understand the Goal.</strong> We have an array of numbers and a target number. We need to find two numbers in the array that add up to the target, and return their indices.</p>
-        <p><strong className="text-foreground">Step 2: The Naive Approach (O(n²)).</strong> We could check every number against every other number, but that's slow. If the array is very large, it would take a long time to check all combinations.</p>
-        <p><strong className="text-foreground">Step 3: A Better Way (O(n)).</strong> Let's use a HashMap (or an Object in JS / Dictionary in Python). As we iterate through the array, for each number, we can easily calculate what other number we need to reach the target: <code className="bg-muted px-1.5 py-0.5 rounded text-accent">needed = target - current_number</code>.</p>
+        <p><strong className="text-foreground">Step 2: The Naive Approach (O(n²)).</strong> We could check every number against every other number, but that&apos;s slow. If the array is very large, it would take a long time to check all combinations.</p>
+        <p><strong className="text-foreground">Step 3: A Better Way (O(n)).</strong> Let&apos;s use a HashMap (or an Object in JS / Dictionary in Python). As we iterate through the array, for each number, we can easily calculate what other number we need to reach the target: <code className="bg-muted px-1.5 py-0.5 rounded text-accent">needed = target - current_number</code>.</p>
         <p><strong className="text-foreground">Step 4: Using the HashMap.</strong> We check if <code className="bg-muted px-1.5 py-0.5 rounded text-accent">needed</code> is already in our HashMap.</p>
         <ul className="list-disc pl-6 space-y-2">
           <li>If it is, we found our pair! We return the index of <code className="bg-muted px-1.5 py-0.5 rounded text-accent">needed</code> and our current index.</li>
-          <li>If it's not, we just add our <code className="bg-muted px-1.5 py-0.5 rounded text-accent">current_number</code> and its index to the HashMap, so future numbers can check against it.</li>
+          <li>If it&apos;s not, we just add our <code className="bg-muted px-1.5 py-0.5 rounded text-accent">current_number</code> and its index to the HashMap, so future numbers can check against it.</li>
         </ul>
       </div>
     ),
@@ -209,9 +210,9 @@ export const dsaSolutions: Record<string, SolutionDetail> = {
   "longest-consecutive-sequence": {
     explanation: (
       <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
-        <p><strong className="text-foreground">Step 1: O(N) Requirement.</strong> Sorting it would be O(N log N). We have to do it in O(N). Let's use a HashSet for O(1) lookups.</p>
-        <p><strong className="text-foreground">Step 2: Find the Start.</strong> A number can only be the start of a sequence if the number BEFORE it (num - 1) doesn't exist in our set!</p>
-        <p><strong className="text-foreground">Step 3: Count Sequence.</strong> For every number that is a "start", we keep checking if (num + 1), (num + 2) etc. exist in the set, keeping a count.</p>
+        <p><strong className="text-foreground">Step 1: O(N) Requirement.</strong> Sorting it would be O(N log N). We have to do it in O(N). Let&apos;s use a HashSet for O(1) lookups.</p>
+        <p><strong className="text-foreground">Step 2: Find the Start.</strong> A number can only be the start of a sequence if the number BEFORE it (num - 1) doesn&apos;t exist in our set!</p>
+        <p><strong className="text-foreground">Step 3: Count Sequence.</strong> For every number that is a &quot;start&quot;, we keep checking if (num + 1), (num + 2) etc. exist in the set, keeping a count.</p>
         <p><strong className="text-foreground">Step 4: Max Check.</strong> We update the maximum sequence length seen so far and return it at the end.</p>
       </div>
     ),
@@ -249,7 +250,7 @@ export const dsaSolutions: Record<string, SolutionDetail> = {
       <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
         <p><strong className="text-foreground">Step 1: The Intuition.</strong> To maximize profit, we want to buy at the lowest possible stock price and sell at the highest price that comes AFTER it.</p>
         <p><strong className="text-foreground">Step 2: Single Pass.</strong> We can iterate through the prices while keeping track of the <code className="text-accent">minPrice</code> seen so far.</p>
-        <p><strong className="text-foreground">Step 3: Update Profit.</strong> If the current price is less than <code className="text-accent">minPrice</code>, we update it. Otherwise, we see what the profit would be if we sold today, and update our <code className="text-accent">maxProfit</code> if it's higher.</p>
+        <p><strong className="text-foreground">Step 3: Update Profit.</strong> If the current price is less than <code className="text-accent">minPrice</code>, we update it. Otherwise, we see what the profit would be if we sold today, and update our <code className="text-accent">maxProfit</code> if it&apos;s higher.</p>
       </div>
     ),
     js: `function maxProfit(prices) {
@@ -278,9 +279,9 @@ export const dsaSolutions: Record<string, SolutionDetail> = {
   "maximum-subarray-(kadane)": {
     explanation: (
       <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
-        <p><strong className="text-foreground">Step 1: Kadane's Algorithm.</strong> We iterate through the array. At each element, we have a choice: either start a new subarray beginning here, or extend the existing subarray.</p>
+        <p><strong className="text-foreground">Step 1: Kadane&apos;s Algorithm.</strong> We iterate through the array. At each element, we have a choice: either start a new subarray beginning here, or extend the existing subarray.</p>
         <p><strong className="text-foreground">Step 2: The Core Logic.</strong> Look at the running sum. If the running sum ever drops below 0, it is actively hurting our subarray's total value! So we simply reset it to 0.</p>
-        <p><strong className="text-foreground">Step 3: Keep Track of Max.</strong> We add the current element to our running sum, update the maximum subarray sum we've seen globally, and continue. It runs entirely in O(N) time with O(1) extra space.</p>
+        <p><strong className="text-foreground">Step 3: Keep Track of Max.</strong> We add the current element to our running sum, update the maximum subarray sum we&apos;ve seen globally, and continue. It runs entirely in O(N) time with O(1) extra space.</p>
       </div>
     ),
     js: `function maxSubArray(nums) {
@@ -349,7 +350,7 @@ export const dsaSolutions: Record<string, SolutionDetail> = {
       <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
         <p><strong className="text-foreground">Step 1: Reduce the Problem.</strong> Finding 3 elements that sum to `0` is essentially selecting one element, and then finding two other elements that sum to `-element`. Thus, it is just Two Sum mapped over the array.</p>
         <p><strong className="text-foreground">Step 2: Sort is Key.</strong> First, sort the array. This allows us to use the Two-Pointer approach for the inner loop and easily skip duplicated elements.</p>
-        <p><strong className="text-foreground">Step 3: Two Pointers.</strong> For each element (acting as 'target'), use left and right pointers on the remaining segment of the array. Skip over contiguous identical elements to avoid duplicate triplets.</p>
+        <p><strong className="text-foreground">Step 3: Two Pointers.</strong> For each element (acting as &apos;target&apos;), use left and right pointers on the remaining segment of the array. Skip over contiguous identical elements to avoid duplicate triplets.</p>
       </div>
     ),
     js: `function threeSum(nums) {
@@ -448,9 +449,9 @@ export const dsaSolutions: Record<string, SolutionDetail> = {
   "binary-search": {
     explanation: (
       <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
-        <p><strong className="text-foreground">Step 1: The Fundamentals.</strong> In a sorted array, we don't have to look through every element. We can find a target logarithmically.</p>
+        <p><strong className="text-foreground">Step 1: The Fundamentals.</strong> In a sorted array, we don&apos;t have to look through every element. We can find a target logarithmically.</p>
         <p><strong className="text-foreground">Step 2: Low and High.</strong> Keep a <code className="text-accent">left</code> pointer at the start and a <code className="text-accent">right</code> pointer at the end of your bounds.</p>
-        <p><strong className="text-foreground">Step 3: Mid Check.</strong> Check the middle item. If it's too big, shift your <code className="text-accent">right</code> pointer to mid - 1. If it's too small, shift your <code className="text-accent">left</code> pointer to mid + 1. Squeeze your search area in half each iteration until you hit it or cross bounds!</p>
+        <p><strong className="text-foreground">Step 3: Mid Check.</strong> Check the middle item. If it&apos;s too big, shift your <code className="text-accent">right</code> pointer to mid - 1. If it&apos;s too small, shift your <code className="text-accent">left</code> pointer to mid + 1. Squeeze your search area in half each iteration until you hit it or cross bounds!</p>
       </div>
     ),
     js: `function search(nums, target) {
@@ -477,9 +478,9 @@ export const dsaSolutions: Record<string, SolutionDetail> = {
   "find-minimum-in-rotated-array": {
     explanation: (
       <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
-        <p><strong className="text-foreground">Step 1: Understanding Rotation.</strong> We know it was sorted, then chopped and placed after. There's a clear 'cliff' where the large values immediately drop to the minimum value.</p>
+        <p><strong className="text-foreground">Step 1: Understanding Rotation.</strong> We know it was sorted, then chopped and placed after. There&apos;s a clear &apos;cliff&apos; where the large values immediately drop to the minimum value.</p>
         <p><strong className="text-foreground">Step 2: Binary Search.</strong> We compare the <code className="text-accent">mid</code> element to the <code className="text-accent">right</code> element.</p>
-        <p><strong className="text-foreground">Step 3: Shift Bounds.</strong> If mid is greater than right, it means the 'cliff' and minimum MUST be to our right! Otherwise, we are currently in the rightward chunk and the minimum is strictly at our current mid or to our left.</p>
+        <p><strong className="text-foreground">Step 3: Shift Bounds.</strong> If mid is greater than right, it means the &apos;cliff&apos; and minimum MUST be to our right! Otherwise, we are currently in the rightward chunk and the minimum is strictly at our current mid or to our left.</p>
       </div>
     ),
     js: `function findMin(nums) {
@@ -539,8 +540,8 @@ export const dsaSolutions: Record<string, SolutionDetail> = {
     explanation: (
       <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
         <p><strong className="text-foreground">Step 1: The Stack Mental Model.</strong> For any valid set of brackets, the most recently opened bracket must be the first one to be closed. A "Last-in, First-out" data structure (a Stack) fits this elegantly.</p>
-        <p><strong className="text-foreground">Step 2: Pushing.</strong> Read the characters. If it's an opening bracket, push it to our stack.</p>
-        <p><strong className="text-foreground">Step 3: Popping.</strong> If it's a closing bracket, pop the top element from the stack. Check if it's the exact corresponding opening bracket for this closer. If it fails or the stack is empty, it's invalid!</p>
+        <p><strong className="text-foreground">Step 2: Pushing.</strong> Read the characters. If it&apos;s an opening bracket, push it to our stack.</p>
+        <p><strong className="text-foreground">Step 3: Popping.</strong> If it&apos;s a closing bracket, pop the top element from the stack. Check if it&apos;s the exact corresponding opening bracket for this closer. If it fails or the stack is empty, it&apos;s invalid!</p>
         <p><strong className="text-foreground">Step 4: Leftovers.</strong> Once finished, the stack must be fully empty; otherwise, there are unclosed brackets left.</p>
       </div>
     ),
@@ -746,7 +747,7 @@ export const dsaSolutions: Record<string, SolutionDetail> = {
   "linked-list-cycle": {
     explanation: (
       <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
-        <p><strong className="text-foreground">Step 1: Floyd's Algorithm.</strong> A cycle detection algorithm that avoids a HashMap. Commonly known as the Tortoise and Hare algorithm.</p>
+        <p><strong className="text-foreground">Step 1: Floyd&apos;s Algorithm.</strong> A cycle detection algorithm that avoids a HashMap. Commonly known as the Tortoise and Hare algorithm.</p>
         <p><strong className="text-foreground">Step 2: Slow and Fast Pointers.</strong> Initialize two pointers. A slow one taking 1 step at a time, and a fast one taking 2 steps at a time.</p>
         <p><strong className="text-foreground">Step 3: The Lap logic.</strong> If there is a cycle, the faster pointer will indefinitely run in circles inside the loop. The slow pointer will inevitably run into the loop. Eventually, they will "lap" each other. If they hit each other, return true.</p>
       </div>
